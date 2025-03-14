@@ -1,4 +1,4 @@
-package com.ladyprogram.superhero
+package com.ladyprogram.superhero.data
 
 
 class SuperheroResponse (
@@ -10,7 +10,11 @@ class SuperheroResponse (
 
 class Superhero (
     val id: String,
-    val name: String
+    val name: String,
+    val image: Image
 
 ) {
 }
+
+
+class Image (val url: String)
