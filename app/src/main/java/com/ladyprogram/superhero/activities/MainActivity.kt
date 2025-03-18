@@ -16,6 +16,7 @@ import com.ladyprogram.superhero.R
 import com.ladyprogram.superhero.adapters.SuperheroAdapter
 import com.ladyprogram.superhero.data.Superhero
 import com.ladyprogram.superhero.data.SuperheroService
+import com.ladyprogram.superhero.databinding.ActivityMainBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -25,22 +26,26 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var recyclerView: RecyclerView
+    //lateinit var recyclerView: RecyclerView
     lateinit var adapter: SuperheroAdapter
+    lateinit var binding: ActivityMainBinding
 
     var superheroList: List<Superhero> = listOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
+
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        recyclerView = findViewById(R.id.recyclerView)
+        //recyclerView = findViewById(R.id.recyclerView)
 
         adapter = SuperheroAdapter(superheroList) { position ->
             val superhero = superheroList[position]
@@ -50,8 +55,8 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        recyclerView.adapter = adapter
-        recyclerView.layoutManager = GridLayoutManager(this, 2)
+        binding.recyclerView.adapter = adapter
+        binding.recyclerView.layoutManager = GridLayoutManager(this, 2)
 
         searchSuperheroesByName("a")
 
