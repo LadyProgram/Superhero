@@ -3,7 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:paddingHorizontal="16dp"
+    android:paddingTop="16dp">
     
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,16 +17,25 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textAlignment="textEnd"
-            android:text="Intelligence:"
-            android:layout_marginEnd="8dp"/>
+            android:text="Intelligence:"/>
 
         <TextView
             android:id="@+id/intelligenceTextView"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            tools:text="100"
+            android:textStyle="bold"
+            android:textAlignment="textEnd"
+            android:layout_marginHorizontal="8dp"/>
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/intelligenceProgressBar"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            tools:text="100"
-            android:textStyle="bold"/>
+            android:progress="30"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="16dp"/>
 
     </LinearLayout>
 
@@ -39,15 +50,25 @@
             android:layout_weight="1"
             android:textAlignment="textEnd"
             android:text="Strength:"
-            android:layout_marginEnd="8dp"/>
+            />
 
         <TextView
             android:id="@+id/strengthTextView"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            tools:text="100"
+            android:textStyle="bold"
+            android:textAlignment="textEnd"
+            android:layout_marginHorizontal="8dp"/>
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/strengthProgressBar"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            tools:text="100"
-            android:textStyle="bold"/>
+            android:progress="30"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="16dp"/>
 
     </LinearLayout>
 
@@ -62,15 +83,25 @@
             android:layout_weight="1"
             android:textAlignment="textEnd"
             android:text="Speed:"
-            android:layout_marginEnd="8dp"/>
+            />
 
         <TextView
             android:id="@+id/speedTextView"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            tools:text="100"
+            android:textStyle="bold"
+            android:textAlignment="textEnd"
+            android:layout_marginHorizontal="8dp"/>
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/speedProgressBar"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            tools:text="100"
-            android:textStyle="bold"/>
+            android:progress="30"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="16dp"/>
 
     </LinearLayout>
 
@@ -85,15 +116,25 @@
             android:layout_weight="1"
             android:textAlignment="textEnd"
             android:text="Durability:"
-            android:layout_marginEnd="8dp"/>
+            />
 
         <TextView
             android:id="@+id/durabilityTextView"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            tools:text="100"
+            android:textStyle="bold"
+            android:textAlignment="textEnd"
+            android:layout_marginHorizontal="8dp"/>
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/durabilityProgressBar"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            tools:text="100"
-            android:textStyle="bold"/>
+            android:progress="30"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="16dp"/>
 
     </LinearLayout>
 
@@ -108,15 +149,25 @@
             android:layout_weight="1"
             android:textAlignment="textEnd"
             android:text="Power:"
-            android:layout_marginEnd="8dp"/>
+            />
 
         <TextView
             android:id="@+id/powerTextView"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            tools:text="100"
+            android:textStyle="bold"
+            android:textAlignment="textEnd"
+            android:layout_marginHorizontal="8dp"/>
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/powerProgressBar"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            tools:text="100"
-            android:textStyle="bold"/>
+            android:progress="30"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="16dp"/>
 
     </LinearLayout>
 
@@ -131,15 +182,25 @@
             android:layout_weight="1"
             android:textAlignment="textEnd"
             android:text="Combat:"
-            android:layout_marginEnd="8dp"/>
+            />
 
         <TextView
             android:id="@+id/combatTextView"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            tools:text="100"
+            android:textStyle="bold"
+            android:textAlignment="textEnd"
+            android:layout_marginHorizontal="8dp"/>
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/combatProgressBar"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            tools:text="100"
-            android:textStyle="bold"/>
+            android:progress="30"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="16dp"/>
 
     </LinearLayout>
 

@@ -3,7 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:paddingHorizontal="16dp"
+    android:paddingTop="16dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -97,7 +99,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="2"
             tools:text="Journalist"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:layout_marginRight="16dp"/>
 
     </LinearLayout>
 

@@ -48,7 +48,7 @@ class DetailActivity : AppCompatActivity() {
                     binding.biographyContent.root.visibility = View.VISIBLE
 
                 }
-                R.id.action_appearence -> {
+                R.id.action_appearance -> {
                     binding.appearanceContent.root.visibility = View.VISIBLE
                     binding.statsContent.root.visibility = View.GONE
                     binding.biographyContent.root.visibility = View.GONE
@@ -94,12 +94,20 @@ class DetailActivity : AppCompatActivity() {
         binding.appearanceContent.heightTextView.text = superhero.appearance.getHeightCm()
 
         //STATS
-        binding.statsContent.intelligenceTextView.text = superhero.stats.intelligence
-        binding.statsContent.strengthTextView.text = superhero.stats.strength
-        binding.statsContent.speedTextView.text = superhero.stats.speed
-        binding.statsContent.durabilityTextView.text = superhero.stats.durability
-        binding.statsContent.powerTextView.text = superhero.stats.power
-        binding.statsContent.combatTextView.text = superhero.stats.combat
+        binding.statsContent.intelligenceTextView.text = "${superhero.stats.intelligence.toIntOrNull() ?: 0}"
+        binding.statsContent.strengthTextView.text = "${superhero.stats.strength.toIntOrNull() ?: 0}"
+        binding.statsContent.speedTextView.text = "${superhero.stats.speed.toIntOrNull() ?: 0}"
+        binding.statsContent.durabilityTextView.text = "${superhero.stats.durability.toIntOrNull() ?: 0}"
+        binding.statsContent.powerTextView.text = "${superhero.stats.power.toIntOrNull() ?: 0}"
+        binding.statsContent.combatTextView.text = "${superhero.stats.combat.toIntOrNull() ?: 0}"
+
+        //STATS ProgressBars
+        binding.statsContent.intelligenceProgressBar.progress = superhero.stats.intelligence.toIntOrNull() ?: 0
+        binding.statsContent.strengthProgressBar.progress = superhero.stats.strength.toIntOrNull() ?: 0
+        binding.statsContent.speedProgressBar.progress = superhero.stats.speed.toIntOrNull() ?: 0
+        binding.statsContent.durabilityProgressBar.progress = superhero.stats.durability.toIntOrNull() ?: 0
+        binding.statsContent.powerProgressBar.progress = superhero.stats.power.toIntOrNull() ?: 0
+        binding.statsContent.combatProgressBar.progress = superhero.stats.combat.toIntOrNull() ?: 0
 
     }
 

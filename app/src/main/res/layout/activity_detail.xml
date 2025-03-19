@@ -35,7 +35,7 @@
                 android:id="@+id/navigationBar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:menu="@menu/menu_activity_detail_navigation"/>
+                app:menu="@menu/menu_activity_detail_navigation" />
 
             <include
                 android:id="@+id/biographyContent"

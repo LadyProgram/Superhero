@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">Superhero</string>
 
-    <string name="menu_search">Search menu </string>
+    <string name="menu_search">Search </string>
     <string name="action_biography">Biography </string>
-    <string name="action_appearence">Appearence </string>
+    <string name="action_appearance">Appearance </string>
     <string name="action_stats">Stats </string>
 
     <string name="publisherBio">Publisher: </string>
