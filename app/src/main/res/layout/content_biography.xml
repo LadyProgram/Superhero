@@ -67,7 +67,7 @@
             android:layout_weight="1"
             android:textAlignment="textEnd"
             android:text="Alignment:"
-            android:layout_marginEnd="8dp"/>
+            android:layout_marginEnd="8dp" />
 
         <TextView
             android:id="@+id/alignmentTextView"
@@ -75,7 +75,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="2"
             tools:text="GOOD"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:textAllCaps="true"/>
 
     </LinearLayout>
 

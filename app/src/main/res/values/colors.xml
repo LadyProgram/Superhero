@@ -5,4 +5,8 @@
 
     <color name="text_background">#D02A2828</color>
 
+    <color name="alignment_color_good">#81BA83</color>
+    <color name="alignment_color_bad">#DC5050</color>
+    <color name="alignment_color_neutral">#D06D6969</color>
+
 </resources>

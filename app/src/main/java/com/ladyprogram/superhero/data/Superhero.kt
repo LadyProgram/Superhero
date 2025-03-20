@@ -1,6 +1,7 @@
 package com.ladyprogram.superhero.data
 
 import com.google.gson.annotations.SerializedName
+import com.ladyprogram.superhero.R
 
 
 class SuperheroResponse (
@@ -16,7 +17,16 @@ class Superhero (
     val appearance: Appearance,
     @SerializedName("powerstats") val stats: Stats,
     val image: Image
-)
+) {
+    fun getAlignmentColor(): Int {
+        return when (biography.alignment) {
+            "good" -> R.color.alignment_color_good
+            "bad" -> R.color.alignment_color_bad
+            else -> R.color.alignment_color_neutral
+        }
+    }
+}
+
 
 class Biography (
     val publisher: String,
@@ -33,8 +43,8 @@ class Work (
 class Appearance (
     val gender: String,
     val race: String,
-    val eyeColor: String,
-    val hairColor: String,
+    @SerializedName("eye-color") val eyeColor: String,
+    @SerializedName("hair-color") val hairColor: String,
     val height: List<String>,
     val weight: List<String>
 ) {
